@@ -2316,11 +2316,11 @@ def Display_Shear_Force_Section():
                                                         plot_shear_force=True,
                                                         color=shear_force_diagram_color))
 
-            value = round(model.members[select_member].max_shear('Fy', combo_name='Combo 1'), 3)
+            value = round(model.members[select_member].max_shear('Fy', combo_tags='Combo 1'), 3)
             st.metric('**Max Shear Force**',
                       value=f"{value} {units_dict[unit_systems]['Placeholder']['F']}")
 
-            value = round(model.members[select_member].min_shear('Fy', combo_name='Combo 1'), 3)
+            value = round(model.members[select_member].min_shear('Fy', combo_tags='Combo 1'), 3)
             st.metric('**Min Shear Force**',
                       value=f"{value} {units_dict[unit_systems]['Placeholder']['F']}")
 
