@@ -2385,11 +2385,11 @@ def Display_Bending_Moment_Section():
                                                         plot_bending_moment=True,
                                                         color=bending_moment_diagram_color))
 
-            value = round(model.members[select_member].max_moment('Mz', combo_name='Combo 1'), 3)
+            value = round(model.members[select_member].max_moment('Mz', combo_tags='Combo 1'), 3)
             st.metric('**Max Bending Moment**',
                       value=f'{value} {units_dict[unit_systems]["Placeholder"]["M"]}')
 
-            value = round(model.members[select_member].min_moment('Mz', combo_name='Combo 1'), 3)
+            value = round(model.members[select_member].min_moment('Mz', combo_tags='Combo 1'), 3)
             st.metric('**Min Bending Moment**',
                       value=f'{value} {units_dict[unit_systems]["Placeholder"]["M"]}')
 
