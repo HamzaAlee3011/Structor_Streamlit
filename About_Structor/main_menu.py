@@ -165,6 +165,13 @@ def app_tree_chart():
                         {"name": "Section Properties Calculator"},
                     ],
                 },
+                {
+                    "name": "Reinforced Concrete design",
+                    "children": [
+                        {"name": "Short Column Design"},
+                        {"name": "Slender/Long Column Design"},
+                    ],
+                },
             ],
         }
     ]

@@ -2523,8 +2523,8 @@ units_dict = {
 
         'Default_Section': {
             'E': 200000,
-            'I': 1,
-            'A': 1
+            'I': 218500000,
+            'A': 40640
         }
     },
 
@@ -2556,8 +2556,8 @@ units_dict = {
 
         'Default_Section': {
             'E': 29000,
-            'I': 1,
-            'A': 1,
+            'I': 500,
+            'A': 60,
         }
 
     }
@@ -3721,6 +3721,11 @@ with tab3:
                 material_name = f'{section_name} Material'  # Name of material
                 E = st.session_state.section_data[i]['E']  # Modulus of Elasticity
                 Iz = st.session_state.section_data[i]['I']  # Moment of Inertia
+
+                # Releases the moment at member ends by turning stiffness approximate to zero
+                if structure_type == 'Truss':
+                    Iz = Iz * 10**(-12)
+
                 A = st.session_state.section_data[i]['A']  # Area of Section
                 Iy = Iz
                 J = 1
@@ -3751,6 +3756,7 @@ with tab3:
                                  j_node=j_node,
                                  section_name=section_name,
                                  material_name=f'{section_name} Material')
+
 
 
             # ----------------------------

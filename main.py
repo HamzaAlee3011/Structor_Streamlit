@@ -13,6 +13,14 @@ import streamlit as st
 # PAGE SETUP
 st.set_page_config(layout='wide')
 
+import streamlit as st
+
+st.logo(
+    image="images/structor_logo-removebg-preview.png",
+    # link="https://streamlit.io/gallery",
+    # icon_image=LOGO_URL_SMALL,
+)
+
 # Structural Analysis Section-----------------------------------------------------------------------
 
 beam_analysis_app = st.Page(
@@ -50,9 +58,9 @@ slender_column_page = st.Page(
 
 # Main Menu Section---------------------------------------------------------------------------------------
 main_menu_page = st.Page(
-    page="About_Structor/main_menu.py",
+    page="About_Structor/main_menu_v2.2.py",
     title="Main Menu",
-    icon=":material/home_app_logo:",
+    # icon=":material/home_app_logo:",
     default=True
 )
 
@@ -68,7 +76,8 @@ pg = st.navigation({
     'Reinforced Concrete Design': [short_column_page, slender_column_page],
     'Menu': [main_menu_page, about_app]
 },
-    position='top')
+    position='top',
+    expanded=True)
 
 # SHARED ON ALL PAGES
 

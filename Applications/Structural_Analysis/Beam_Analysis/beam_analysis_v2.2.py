@@ -377,19 +377,19 @@ def result_without_deflection():
     col1a, col1b, col1c = st.columns(3, gap='medium')
 
     with col1b:
-        st.metric('### :red-background[Max. Bending Moment]',
+        st.metric(':red-background[Max. Bending Moment]',
                   value=f"{round(beam.get_bending_moment(return_max=True), 2)}  {units_dict[unit_systems]['Placeholder']['moment']}")
-        st.metric('### :red-background[Min. Bending Moment]',
+        st.metric(':red-background[Min. Bending Moment]',
                   value=f"{round(beam.get_bending_moment(return_min=True), 2)}  {units_dict[unit_systems]['Placeholder']['moment']}")
-        st.metric('### :red-background[Absolute Max. Bending Moment]',
+        st.metric(':red-background[Absolute Max. Bending Moment]',
                   value=f"{round(beam.get_bending_moment(return_absmax=True), 2)}  {units_dict[unit_systems]['Placeholder']['moment']}")
 
     with col1a:
-        st.metric('### :red-background[Max. Shear Force]',
+        st.metric(':red-background[Max. Shear Force]',
                   value=f"{round(beam.get_shear_force(return_max=True), 2)}  {units_dict[unit_systems]['Placeholder']['force']}")
-        st.metric('### :red-background[Min. Shear Force]',
+        st.metric(':red-background[Min. Shear Force]',
                   value=f"{round(beam.get_shear_force(return_min=True), 2)}  {units_dict[unit_systems]['Placeholder']['force']}")
-        st.metric('### :red-background[Absolute Max. Shear Force]',
+        st.metric(':red-background[Absolute Max. Shear Force]',
                   value=f"{round(beam.get_shear_force(return_absmax=True), 2)}  {units_dict[unit_systems]['Placeholder']['force']}")
 
 
@@ -403,27 +403,27 @@ def result_with_deflection():
     col1a, col1b, col1c = st.columns(3, gap='medium')
 
     with col1b:
-        st.metric('### :red-background[Max. Bending Moment]',
+        st.metric(':red-background[Max. Bending Moment]',
                   value=f"{round(beam.get_bending_moment(return_max=True), 2)}  {units_dict[unit_systems]['Placeholder']['moment']}")
-        st.metric('### :red-background[Min. Bending Moment]',
+        st.metric(':red-background[Min. Bending Moment]',
                   value=f"{round(beam.get_bending_moment(return_min=True), 2)}  {units_dict[unit_systems]['Placeholder']['moment']}")
-        st.metric('### :red-background[Absolute Max. Bending Moment]',
+        st.metric(':red-background[Absolute Max. Bending Moment]',
                   value=f"{round(beam.get_bending_moment(return_absmax=True), 2)}  {units_dict[unit_systems]['Placeholder']['moment']}")
 
     with col1a:
-        st.metric('### :red-background[Max. Shear Force]',
+        st.metric(':red-background[Max. Shear Force]',
                   value=f"{round(beam.get_shear_force(return_max=True), 2)}  {units_dict[unit_systems]['Placeholder']['force']}")
-        st.metric('### :red-background[Min. Shear Force]',
+        st.metric(':red-background[Min. Shear Force]',
                   value=f"{round(beam.get_shear_force(return_min=True), 2)}  {units_dict[unit_systems]['Placeholder']['force']}")
-        st.metric('### :red-background[Absolute Max. Shear Force]',
+        st.metric(':red-background[Absolute Max. Shear Force]',
                   value=f"{round(beam.get_shear_force(return_absmax=True), 2)}  {units_dict[unit_systems]['Placeholder']['force']}")
 
     with col1c:
-        st.metric('### :red-background[Upwards Deflection]',
+        st.metric(':red-background[Upwards Deflection]',
                   value=f"{round(beam.get_deflection(return_max=True), 3)}  {units_dict[unit_systems]['Placeholder']['deflection']}")
-        st.metric('### :red-background[Downwards Deflection]',
+        st.metric(':red-background[Downwards Deflection]',
                   value=f"{round(beam.get_deflection(return_min=True), 3)}  {units_dict[unit_systems]['Placeholder']['deflection']}")
-        st.metric('### :red-background[Absolute Max. Deflection]',
+        st.metric(':red-background[Absolute Max. Deflection]',
                   value=f"{round(beam.get_deflection(return_absmax=True), 3)}  {units_dict[unit_systems]['Placeholder']['deflection']}")
 
 
